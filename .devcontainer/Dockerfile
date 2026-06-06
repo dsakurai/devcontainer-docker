@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     # Password-less sudo
     && echo "${USERNAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/${USERNAME} && chmod 0440 /etc/sudoers.d/${USERNAME}
 
+# RUN mkdir -p ~/.config/nix \
+# && echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+
 # RUN apt-get update && apt-get install -y --no-install-recommends \
 #     \
 #     && rm -rf /var/lib/apt/lists/* \
